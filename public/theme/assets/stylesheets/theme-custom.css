@@ -1,0 +1,183 @@
+/* Add here all your CSS customizations */
+
+.page-header {
+    background: linear-gradient(-90deg, #333333, transparent) !important;
+    /* background-image: linear-gradient(179deg, #2273bb, #0187fd, #266898, #305e79, #515157, #8c8c8e 83%); */
+}
+
+.page-header .breadcrumbs li {
+    color: #ffffff;
+}
+
+.page-header .breadcrumbs li span, i {
+    color: #ffffff;
+}
+
+.header {
+    /* background-image: -webkit-linear-gradient(#305e79 16%, #8a8a8a 84%); */
+    /* background-image: linear-gradient(179deg, #000000 38%, #575961, #2074bf, #0087ff 86%, #305e79); */
+    background-image: linear-gradient(90deg, #315e79, #ffffff 20%, #000000);
+}
+
+.userbox .name, .userbox .role {
+    color: #ffffff;
+}
+
+.notifications .notification-menu .notification-title {
+    background-image: -webkit-linear-gradient(#305e79 16%, #8a8a8a 84%);
+}
+
+.bg-primary {
+    background-color: #305e79 !important;
+}
+
+.panel-featured-edited {
+    border-color: #305e79 !important;
+    /* background-image: -webkit-linear-gradient(#305e79 16%, #8a8a8a 84%); */
+}
+
+.panel-heading {
+    background-color: #305e796b !important
+    /* background-image: -webkit-linear-gradient(#305e79 16%, #8a8a8a 84%); */
+}
+
+.panel-title {
+    color: #ffffff;
+}
+
+.tbl_mpm {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    border-spacing: 55px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.tbl_mpm tbody tr td {
+    border: 3px solid #305e79;
+    /* border-radius: 25px; */
+    background: #ecedf0;
+    color: #333333;
+}
+
+ul.nav-main li a {
+    color: white;
+}
+
+ul.nav-main li a:hover {
+    color: white;
+    background: linear-gradient(90deg, #031e2d, transparent) !important;
+}
+
+ul.nav-main>li.nav-expanded>a {
+    background: linear-gradient(90deg, #041f2e, transparent) !important;
+}
+
+ul.nav-main li .nav-children {
+    background: linear-gradient(90deg, #031e2d, transparent) !important;
+}
+
+ul.nav-main li .nav-children>li:hover {
+    /* background: linear-gradient(90deg, #031e2d, transparent) !important; */
+    background: #305e79;
+}
+
+/* ul.nav-main li.nav-parent :hover {
+    background: linear-gradient(90deg, #031e2d, transparent) !important;
+} */
+
+button.Deactivate {
+    background-color: #d61e1e;
+    color: #ffffff;
+}
+
+button.Activate {
+    background-color: #305e79;
+    color: #ffffff;
+}
+
+label.form-check-label {
+    color: #ffffff;
+}
+
+.content-body {
+    /* background-image: linear-gradient(-45deg, black, transparent); */
+    padding-top: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.panel-custom-management {
+    margin-bottom: 0px;
+    height: 100%;
+}
+
+.panel-body-custom-management {
+    height: 740px;
+}
+
+div.table-responsive {
+    max-height: 600px;
+}
+
+#tbl_user thead {
+    display: none;
+}
+
+.sidebar-left {
+    /* background-image: linear-gradient(179deg, #2273bb 0%, #0187fd 2%, #266898, #305e79 5%, #51515A 7%, #98989a 17%); */
+    background-color: #d4dee3;
+    background-image: linear-gradient(90deg, #305e79, transparent);
+    color: #ffffff;
+}
+
+.td_label {
+    width: 15%;
+}
+
+.td_value {
+    width: 25%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.u-controls {
+    color: black;
+}
+
+.body2 {
+    height: 100vh;
+    background-image: url("../images/bg2.jpg");
+    filter: blur(0px);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    z-index: inherit -1;
+}
+
+/* #demo.width {
+    height: auto;
+    -webkit-transition: width 0.35s ease;
+    -moz-transition: width 0.35s ease;
+    -o-transition: width 0.35s ease;
+    transition: width 0.35s ease;
+} */
+
+#machine_mgmt1 {
+    width: 100%;
+}
+
+.kolaps {
+    width: 0% !important;
+    transition: width 1s ease !important;
+    padding: 0 !important;
+}
+
+/* .inkolaps {
+    width: 100% !important;
+    transition: 1s;
+} */
