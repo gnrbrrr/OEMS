@@ -30,6 +30,8 @@ Route::resource('User','UserController');
 
 /* MACHINE MANAGEMENT START */
 
+Route::get('Machine/load/', 'MachineController@load');
+Route::get('Machine/{col}/{val}', 'MachineController@getData')->name('getData');
 
 Route::resource('Machine','MachineController');
 

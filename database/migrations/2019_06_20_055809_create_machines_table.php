@@ -29,9 +29,9 @@ class CreateMachinesTable extends Migration
             $table->date('date_made')->nullable();
             $table->date('arrival_date')->nullable();
             $table->string('padlock_number')->length(5);
-            $table->string('remarks')->length(30);
+            $table->string('remarks')->length(30)->nullable();
             $table->string('image_name')->length(80);
-            $table->string('status')->length(25);
+            $table->string('status')->length(25)->default(0);
             $table->string('registrant_id')->length(30);
             $table->date('disposal_date')->nullable();
               

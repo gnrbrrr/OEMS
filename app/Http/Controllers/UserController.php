@@ -44,12 +44,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        if (isset($_FILES["img_user"])) {
+        $newname = 'sample-user.png';
+
+        if (isset($_FILES["img_user"])  && $_FILES["img_user"]['error'] == 0) {
             $file = $_FILES["img_user"];
             $imageFileType = strtolower(pathinfo('upload/user/'. basename($file['name']), PATHINFO_EXTENSION));
             $newname = str_replace(' ', '_', $request->txt_firstname) . "_" . str_replace(' ', '_', $request->txt_lastname) . "." .$imageFileType;
-        } else {
-            $newname = 'sample-user.png';
         }
         
         $data =
@@ -150,7 +150,6 @@ class UserController extends Controller
 
     public function load($status)
     {
-        
         $data = User::getUsers($status);
         return $data;
     }
