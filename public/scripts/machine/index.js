@@ -51,6 +51,10 @@ var MACHINE = (function () {
 
                     tbody += '<tr class=machine_' + status + '>' +
                         '<td>' + x + '</td>' +
+                        '<td style="vertical-align:bottom;">' +
+                        '<a onclick="MACHINE.edit('+ this.id +')" title="Add Machine"><i style="color:#305e79;" class="fa fa-plus fa-2x" ></i ></a >&nbsp&nbsp'+
+                        '&nbsp&nbsp<a onclick="MACHINE.change('+ this.id +')" title="View History"><i style="color:#305e79;" class="fa fa-history fa-2x"></i></a>'+
+                        '</td>' +
                         '<td>' + this.control_number.toUpperCase() + '</td>' +
                         '<td>' + this.machine_name.toUpperCase() + '</td>' +
                         '<td>' + this.model.toUpperCase() + '</td>' +
@@ -80,7 +84,10 @@ var MACHINE = (function () {
 
     this_machine.showModal_addMachine = function () {
         // console.log('wew');
-        $('#mdl_machine_registration').modal('show');
+        $('#mdl_machine_registration').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
         $('#list_machine_name').empty();
         $('#list_machine_location').empty();
         $('#list_user').empty();
@@ -110,6 +117,16 @@ var MACHINE = (function () {
                     .text(value.toUpperCase()));
         });
     }
+
+    this_machine.edit = function (id) {
+        // var id = $(this).attr('id');
+        alert(id);
+    };
+
+    this_machine.change = function (id) {
+        // var id = $(this).attr('id');
+        alert(id);
+    };
 
     $('#txt_machine_name').focusout(function () {
         // alert($(this).val().toUpperCase());
@@ -180,23 +197,37 @@ var MACHINE = (function () {
                         message: 'Machine registered successfully',
                     });
 
-                    $('#img_profile').attr('src','');
-                    $('#img_input_machine').attr('src', '/OEMS/public/upload/machine/image.png');
                     $('#form_machine_registration').trigger('reset');
+                    
+                    $('#mdl_machine_registration').modal('hide');
                     MACHINE.load_data();
 
                 }
             },
             error: function (data) {
                 console.log(data);
+            },
+            complete: function (data) {
+                $('#img_machine').attr('src', '');
+                $('#img_machine').attr('src', '/OEMS/public/upload/machine/image.png');
             }
         });
 
     });
 
+    /* $('#mdl_machine_registration').modal('hide', function () {
+        
+        $('#img_machine').attr('src', '');
+        $('#img_machine').attr('src', '/OEMS/public/upload/machine/image.png');
+        
+    }); */
+
     $('#btn_cancel').click(function () {
         $('#mdl_machine_registration').modal('hide');
         $('#form_machine_registration').trigger('reset');
+
+        $('#img_machine').attr('src', '');
+        $('#img_machine').attr('src', '/OEMS/public/upload/machine/image.png');
     });
     return this_machine;
 })();

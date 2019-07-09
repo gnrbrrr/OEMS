@@ -45,6 +45,7 @@
                 <thead>
                     <tr>
                         <td>No</td>
+                        <td width="15%">Actions</td>
                         <td width="5%">Machine Controller No.</td>
                         <td>Machine Name</td>
                         <td width="10%">Model</td>
@@ -70,7 +71,7 @@
 </div> {{-- row-end --}}
 
 <!-- Modal Form -->
-<div id="mdl_machine_registration" class="modal" role="dialog">
+<div id="mdl_machine_registration" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content - start-->

@@ -223,3 +223,8 @@ div#div_img_machine {
     left: 220px;
     width: 50%;
 }
+
+table#tbl_machine i.icon-btn
+{
+    color:red;
+}

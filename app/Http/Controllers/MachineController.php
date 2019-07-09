@@ -91,7 +91,7 @@ class MachineController extends Controller
     public function validator(array $data)
     {
         $validator = Validator::make($data, [
-            'image' => ['string','max:80'],
+            'image_name' => ['required','string','max:80'],
             'control_number' => ['required', 'string', 'max:50', 'unique:machines'],
             'machine_name' => ['required', 'string', 'max:50'],
             'model' => ['required', 'string', 'max:30'],
