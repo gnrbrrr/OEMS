@@ -9,14 +9,14 @@
                     <div class="widget-summary">
                         <div class="widget-summary-col widget-summary-col-icon">
                             <div class="summary-icon bg-primary">
-                                <i class="fa fa-warning appear-animation bounceIn appear-animation-visible"></i>
+                                <i class="fa fa-warning fa-custom-big appear-animation bounceIn appear-animation-visible"></i>
                             </div>
                         </div>
                         <div class="widget-summary-col">
                             <div class="summary">
                                 <h4 class="title"><b>Troubles (TR)</b></h4>
                                 <div class="info">
-                                    <strong class="amount" id="txt_trouble_tr">1281</strong>
+                                    <strong class="amount" id="txt_trouble_tr">7</strong>
                                     {{-- <span class="text-primary">(14 unread)</span> --}}
                                 </div>
                             </div>
@@ -34,14 +34,14 @@
                     <div class="widget-summary">
                         <div class="widget-summary-col widget-summary-col-icon">
                             <div class="summary-icon bg-primary">
-                                <i class="fa fa-gear appear-animation bounceIn appear-animation-visible"></i>
+                                <i class="fa fa-gear fa-custom-big appear-animation bounceIn appear-animation-visible"></i>
                             </div>
                         </div>
                         <div class="widget-summary-col">
                             <div class="summary">
                                 <h4 class="title"><b>Troubles (MDI)</b></h4>
                                 <div class="info">
-                                    <strong class="amount" id="txt_trouble_mdi">150</strong>
+                                    <strong class="amount" id="txt_trouble_mdi">20</strong>
                                 </div>
                             </div>
                             {{-- <div class="summary-footer">
@@ -58,14 +58,14 @@
                     <div class="widget-summary">
                         <div class="widget-summary-col widget-summary-col-icon">
                             <div class="summary-icon bg-primary">
-                                <i class="fa fa-wrench appear-animation bounceIn appear-animation-visible"></i>
+                                <i class="fa fa-wrench fa-custom-big appear-animation bounceIn appear-animation-visible"></i>
                             </div>
                         </div>
                         <div class="widget-summary-col">
                             <div class="summary">
                                 <h4 class="title"><b>Machine's for PM<b></h4>
                                 <div class="info">
-                                    <strong class="amount" id="txt_machine_pm">38</strong>
+                                    <strong class="amount" id="txt_machine_pm">6</strong>
                                 </div>
                             </div>
                             {{-- <div class="summary-footer">

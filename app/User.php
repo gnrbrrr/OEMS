@@ -45,6 +45,7 @@ class User extends Authenticatable
 
         return $user;
     }
+    
     public static function getUsers($status)
     {
         $user = User::where('status', $status)

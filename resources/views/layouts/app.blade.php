@@ -1,31 +1,36 @@
 @include('inc.header')
-	<body>
-		<section class="body">
 
-			<!-- start: header -->
-			@include('inc.menu-header')
-			<!-- end: header -->
+<body>
+	<section class="body">
 
-			<div class="inner-wrapper">
-				<!-- start: sidebar-left -->
-				@include('inc.menu-sidebar-left')
-				<!-- end: sidebar-left -->
+		<!-- start: header -->
+		@include('inc.menu-header')
+		
+		<!-- end: header -->
 
-				<section role="main" class="content-body">
-                    @include('inc.menu-navbar')                  
-					<!-- start: page -->
-                    @yield('content')
-					<!-- end: page -->
-				</section>
-			</div>
+		<div class="inner-wrapper">
+			<!-- start: sidebar-left -->
+			@include('inc.menu-sidebar-left')
+			<!-- end: sidebar-left -->
 
-            <!-- start: sidebar-right -->
-            @include('inc.menu-sidebar-right')
-			<!-- end: sidebar-right -->
-		</section>
+			<section role="main" class="content-body">
+				@include('inc.menu-navbar')
+				<!-- start: page -->
+				{{-- @include('common.errors') --}}
 
-        {{-- start: js --}}
-		@include('inc.footer')
-		{{-- end: js --}}
-	</body>
+				@yield('content')
+				<!-- end: page -->
+			</section>
+		</div>
+
+		<!-- start: sidebar-right -->
+		@include('inc.menu-sidebar-right')
+		<!-- end: sidebar-right -->
+	</section>
+
+	{{-- start: js --}}
+	@include('inc.footer')
+	{{-- end: js --}}
+</body>
+
 </html>

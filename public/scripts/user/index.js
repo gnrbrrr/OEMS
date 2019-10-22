@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
 
-    console.log('ready');
+    console.log('USER - READY');
     USER.load_data(0);
 
 
-    $('#form_create_user').on('submit', function (event) {
+    $('#form_user_registration').on('submit', function (event) {
         event.preventDefault();
 
         $.ajax({
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
                     // $('#img_profile').attr('src','');
                     $('#img_profile').attr('src', '/OEMS/public/upload/user/sample-user.png');
-                    $('#form_create_user').trigger('reset');
+                    $('#form_user_registration').trigger('reset');
                     USER.load_data(0);
 
                 }
@@ -63,24 +63,12 @@ var USER = (function () {
     var this_user = {};
     var _curr_id = 0;
 
-    this_user.file_preview = function (input) {
-        if (input != undefined && (input.files && input.files[0])) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#img_profile').attr('src', e.target.result);
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-        else {
-            $('#img_profile').attr('src', '/OEMS/public/upload/user/sample-user.png');
-        }
-    };
-
-
 
     this_user.load_data = function (status) {
 
         var table_status = (status === 0 ? 'Deactivate' : 'Activate');
+
+        $("input[name='rad_status'][value='" + status + "']").prop('checked', true);
 
         $.ajax({
             type: 'get',
@@ -176,7 +164,7 @@ var USER = (function () {
 
                             iziToast.success({
                                 title: 'SUCCESS',
-                                message: 'User created successfully',
+                                message: 'User updated successfully',
                             });
 
                             USER.load_data(0);
@@ -283,7 +271,7 @@ var USER = (function () {
 
                     // $('#img_profile').attr('src','');
                     $('#img_profile').attr('src', '/OEMS/public/upload/user/sample-user.png');
-                    $('#form_create_user').trigger('reset');
+                    $('#form_user_registration').trigger('reset');
                     USER.load_data(0);
 
                 }
@@ -366,7 +354,7 @@ var USER = (function () {
     }
 
     this_user.cancel = function () {
-        $('#form_create_user').trigger('reset');
+        $('#form_user_registration').trigger('reset');
 
         _curr_id = 0;
         $('#form_control2').hide();

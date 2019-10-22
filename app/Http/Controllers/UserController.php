@@ -24,7 +24,7 @@ class UserController extends Controller
     
     public function index()
     {
-        return view('user.index', ['page_name' => 'User Management']);
+        return view('user.index', ['page_name' => 'User Management', 'path' => 'Registration / User Management']);
     }
 
     /**
@@ -195,16 +195,16 @@ class UserController extends Controller
     public function validator(array $data)
     {
         $validator = Validator::make($data, [
-            'image' => ['string','max:50'],
-            'firstname' => ['required', 'string', 'max:50'],
-            'middlename' => ['string', 'max:50'],
-            'lastname' => ['required', 'string', 'max:50'],
-            'email' => ['required', 'email', 'max:50'],
-            'position' => ['required', 'string', 'max:50'],
-            'designation' => ['required', 'string', 'max:50'],
-            'section' => ['required', 'string', 'max:50'],
-            'employee_number' => ['required', 'integer','unique:users'],
-            'password' => ['required', 'min:8', 'confirmed'],
+            'image' => 'string|max:50',
+            'firstname' => 'required|string|max:50',
+            'middlename' => 'string|max:50',
+            'lastname' => 'required|string|max:50',
+            'email' => 'required|email|max:50',
+            'position' => 'required|string|max:50',
+            'designation' => 'required|string|max:50',
+            'section' => 'required|string|max:50',
+            'employee_number' => 'required|integer|unique:users',
+            'password' => 'required|min:8|confirmed',
         ]);
 
         return $validator;

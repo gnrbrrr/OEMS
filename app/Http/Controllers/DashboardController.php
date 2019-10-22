@@ -16,11 +16,11 @@ class DashboardController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            $result = (Auth::user()->status == 0 ? view('index', [ 'page_name' => 'Dashboard']) :
+            $result = (Auth::user()->status == 0 ? view('index', [ 'page_name' => 'Dashboard', 'path' => 'Dashboard']) :
                     view('user.login', ['page_name' => 'Log In (status)','errors'=>'Log In attempt fails!']));
             return $result;
         } else {
-            return view('user.login', ['page_name' => 'Log In']);
+            return view('user.login', ['page_name' => 'Log In', 'path' => 'User Log in']);
         }
     }
 

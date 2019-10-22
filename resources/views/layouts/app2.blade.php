@@ -2,6 +2,7 @@
 
 <body>
     <section class="body2">
+        {{-- @include('common.errors') --}}
         @yield('content');
     </section>
 

@@ -16,7 +16,7 @@ class CreateMachinesTable extends Migration
         Schema::create('machines', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('fixed_asset_number');
-            $table->string('control_number');
+            $table->string('control_number')->unique();
             $table->string('machine_name');
             $table->string('line');
             $table->string('model');
@@ -25,9 +25,9 @@ class CreateMachinesTable extends Migration
             $table->string('manufacturer');
             $table->string('working_capacity');
             $table->string('machine_location');
-            $table->string('location_user');
+            $table->string('section');
             $table->date('date_made')->nullable();
-            $table->date('arrival_date')->nullable();
+            $table->date('date_arrived')->nullable();
             $table->string('padlock_number');
             $table->string('remarks')->nullable();
             $table->string('image_name');
